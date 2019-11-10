@@ -1,4 +1,5 @@
 // Global app controller
 import x from './test';
-console.log("into the forkify project");
+let myVariable="vvv";
+console.log(`into the forkify project :  ${myVariable}`);
 console.log(`exproter value :${x}`);
