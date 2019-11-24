@@ -6,8 +6,10 @@ module.exports = {
         path : path.resolve(__dirname,'dist'),//to where all the bundle.js path
         filename:'js/bundle.js'//name of the bundled js file
     },
+    watch:true,
     devServer:{//to make sure that we dont build the bundle every time
-        contentBase:'./dist'//the path or directory where the index.html file needs to injected
+        contentBase:'./dist',//the path or directory where the index.html file needs to injected
+        
     },
     plugins:[//complex processing of input files
             new htmlPlugin({
