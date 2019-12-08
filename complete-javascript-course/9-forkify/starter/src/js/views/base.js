@@ -9,7 +9,11 @@ export const  elementName =
     searchElement : document.querySelector('.search__field'),
     resultELementHead : document.querySelector('.results'),
     resultList: document.querySelector('.results__list'),
-    searchRes : document.querySelector('.results__pages')
+    searchRes : document.querySelector('.results__pages'),
+    likesMenu : document.querySelector('.likes__field'),
+    likeList : document.querySelector('.likes__list'),
+    shoppingList : document.querySelector('.shopping__list'),
+    receipe : document.querySelector('.recipe')
 }
 
 export const elementString = {

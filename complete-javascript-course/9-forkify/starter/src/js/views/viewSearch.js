@@ -9,8 +9,19 @@ export const getInput = () =>  {
     return elementName.searchElement.value;
 }
 
+
+//highlectSelected 
+export const highLightSelected = (id) => {
+    const aryContaingClass = Array.from(document.querySelectorAll('.results__link--active'));
+    aryContaingClass.forEach(el => {
+        el.classList.remove('results__link--active');
+    });
+    document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active');
+}
+
+
 // function that takes care abouth the length of the title of recie in each receipie result
-const limitTItleOfRecipe = (title,limit = 17) => {
+export const limitTItleOfRecipe = (title,limit = 17) => {
     const newTitle = [];
     console.log("");
     if(title.length > 17) {
@@ -30,7 +41,7 @@ const limitTItleOfRecipe = (title,limit = 17) => {
 const receipeELement = receipe => {
     let receipeHtml =  `
     <li>
-        <a class="results__link results__link--active" href='${receipe.recipe_id}'>
+        <a class="results__link" href='#${receipe.recipe_id}'>
             <figure class="results__fig">
                 <img src="${receipe.image_url}" alt="Test">
             </figure>
